@@ -1,6 +1,9 @@
 class Solution(object):
     def poorPigs(self, buckets, minutesToDie, minutesToTest):
-        pigs = 0
-        while (minutesToTest / minutesToDie + 1) ** pigs < buckets:
-            pigs += 1
-        return pigs
+        no_of_tests = int(minutesToTest/minutesToDie)
+
+        possible_attempts = no_of_tests + 1
+        pegs = 0
+        while possible_attempts ** pegs < buckets:
+            pegs +=1
+        return pegs
